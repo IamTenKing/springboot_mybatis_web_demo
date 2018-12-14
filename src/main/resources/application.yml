@@ -1,0 +1,28 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+
+  #数据库连接用户名
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chatchat_dev?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.ten.springboot_mybatis_web_demo.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+mapper:
+  mappers: com.ten.springboot_mybatis_web_demo.utils.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true
+  params: count=countSql
+
+
