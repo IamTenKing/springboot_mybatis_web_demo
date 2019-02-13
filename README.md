@@ -1,1 +1,3 @@
 # springboot_mybatis_web_demo
+
+spring boot整和mybatis，使用mybatis逆向工程生成的pojo类
